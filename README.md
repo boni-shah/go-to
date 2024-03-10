@@ -4,8 +4,11 @@
 To install angular locally:
 
 npm init -y
+
 npm i @angular/cli
+
 npx ng new app-name
+
 
 To update a locally installed angular version, say bump 8.x to 9.x, you can use
 
