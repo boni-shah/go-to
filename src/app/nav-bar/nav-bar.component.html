@@ -1,0 +1,39 @@
+<mat-toolbar>
+    <button mat-icon-button onclick="this.blur()" (click)="toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>{{title}}</span>
+    <a mat-button routerLink="/home">
+        <mat-icon>home</mat-icon> <span>Home</span>
+    </a>
+    <a mat-button routerLink="/list">
+        <mat-icon>list</mat-icon> <span>List</span>
+    </a>
+    <a mat-button routerLink="/my-links" *ngIf="this.auth.currentUser">
+        <mat-icon>list_alt</mat-icon> <span>My Links</span>
+    </a>
+    <a mat-button routerLink="/favorites" *ngIf="this.auth.currentUser">
+        <mat-icon>favorite</mat-icon> <span>Favorites</span>
+    </a>
+    <a mat-button routerLink="/goto/add" *ngIf="this.auth.currentUser">
+        <mat-icon>add_circle</mat-icon> <span>Add New</span>
+    </a>
+    <span class="toolbar-spacer"></span>
+    <a mat-button routerLink="/search">
+        <mat-icon>search</mat-icon> <span>Search</span>
+    </a>
+    <div class="margin-right">
+        <a mat-button routerLink="/log-in" *ngIf="!this.auth.currentUser">
+            <mat-icon>person</mat-icon>
+            <span>Log In</span>
+        </a>
+        <button mat-button [matMenuTriggerFor]="belowMenu" *ngIf="this.auth.currentUser">
+            <mat-icon>account_circle</mat-icon>
+            <span>{{this.auth.currentUser?.FirstName}}</span>
+        </button>
+        <mat-menu #belowMenu="matMenu" yPosition="below">
+            <button type="button" mat-menu-item (click)="goToProfilePage()">Profile</button>
+            <button type="button" mat-menu-item (click)="logout()">Log Out</button>
+        </mat-menu>
+    </div>
+</mat-toolbar>

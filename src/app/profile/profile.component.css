@@ -1,0 +1,55 @@
+.profile-form {
+  margin: 75px 0px 0px 0px;
+  min-width: 250px;
+  max-width: 600px;
+  width: 100%;
+}
+
+table {
+  width: 800px;
+}
+em {
+  color: red;
+  float: right;
+}
+
+label {
+  display: block;
+  margin: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 90%;
+  height: 30px;
+  padding: 5px 10px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #dadada;
+  color: white;
+}
+
+button {
+  width: 40%;
+  margin-top: 10px;
+  margin-left: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  background: seagreen; /* background: #52ad9c; */
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #428a7d;
+}
+
+button:disabled,
+button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}

@@ -1,0 +1,42 @@
+<p>This page was called from '{{calledFrom}}'</p>
+
+<div *ngIf="pageSource === listSource.Search">
+    Search component will be shown here.
+</div>
+
+<div>
+    <table class="actions-table">
+        <tr class="actions-row">
+            <td>
+                <button mat-icon-button>
+                    <mat-icon>home</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>list</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>list_alt</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>add_circle</mat-icon>
+                </button>
+            </td>
+            <td><input type="text" placeholder="Filter Results..." class="filter-input" style="float: right;"
+                    [disabled]="!results.length">
+            </td>
+        </tr>
+    </table>
+
+    <table class="results-grid">
+        <tr *ngFor="let result of results">
+            <td>
+                <div class="result-div">
+                    <go-to-detail-panel [goToData]="result"></go-to-detail-panel>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,53 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 230px auto 0px;
+  min-width: 150px;
+  max-width: 400px;
+  width: 100%;
+}
+
+em {
+  color: red;
+  float: right;
+}
+
+label {
+  display: block;
+  margin: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 90%;
+  height: 30px;
+  padding: 5px 10px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #dadada;
+  color: #888;
+}
+
+button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  background: seagreen; /* background: #52ad9c; */
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #428a7d;
+}
+
+button:disabled,
+button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}

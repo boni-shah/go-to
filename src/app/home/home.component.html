@@ -1,0 +1,20 @@
+<table class="list-table">
+    <tr>
+        <td>Top Entries</td>
+        <td>Most Favorited</td>
+        <td>Recently Added</td>
+    </tr>
+    <tr>
+        <td>
+            <list-snapshot [dataToDisplay]="topEntries"></list-snapshot>
+        </td>
+        <td>
+            <list-snapshot [dataToDisplay]="mostFavorited"></list-snapshot>
+        </td>
+        <td>
+            <list-snapshot [dataToDisplay]="recentlyAdded"></list-snapshot>
+        </td>
+    </tr>
+</table>
+
+<featured-panels class="featured-panel"></featured-panels>

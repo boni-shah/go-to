@@ -1,0 +1,17 @@
+<div class="featured-div">
+    <div style="float: left; height:40px;">
+        <h2 style="margin:0px;">Featured:</h2>
+    </div>
+    <div style="float: right;">
+        <button mat-mini-fab color="black" style="margin-right:5px;" (click)="nextPanel()">&lt;</button>
+        <button mat-mini-fab color="black" (click)="previousPanel()">&gt;</button>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div *ngFor="let url of featuredURLs; let i = index;">
+        <div *ngIf="currentPanel === i" [@slideInOut]>
+            <go-to-detail-panel [goToData]="url"></go-to-detail-panel>
+        </div>
+    </div>
+</div>

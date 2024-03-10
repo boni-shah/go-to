@@ -1,0 +1,6 @@
+<div class="timer-div" [ngStyle]="{'color': timerColor}" *ngIf="showCounter">
+    <mat-icon class="timer-icon">
+        save
+    </mat-icon>
+    Auto-Save in {{counter | formatMinutes}} minutes
+</div>

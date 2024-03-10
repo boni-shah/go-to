@@ -1,0 +1,36 @@
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar {
+  background: seagreen;
+  color: white;
+}
+
+a,
+a:link,
+a:visited,
+a:focus,
+a:hover,
+a:active {
+  color: white;
+  text-decoration: none;
+}
+
+mat-icon {
+  padding: 0px 5px 0px 0px;
+  vertical-align: middle;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+}
+
+a span {
+  vertical-align: middle;
+}
+
+.margin-right {
+  margin-right: 25px;
+}
